@@ -1,165 +1,79 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <title>Genetic Soylent</title>
-    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
-    <style>
-        .table-condensed {
-            font-size: 10px;
-        }
-        .ingredientInput {
-            width: 50px;
-            text-align: center;
-        }
-        .nutrientInput {
-            width: 50px;
-            text-align: center;
-        }
-        .ratioInput {
-            width: 50px;
-            text-align: center;
-        }
-    </style>
 
-</head>
-<body>
-    <script type="text/javascript" src="GeneticSoylent.js"></script>
-    <script type="text/javascript" src="Recipe.js"></script>
-    <script type="text/javascript" src="app.js"></script>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Genetic-soylent : ">
 
-    <div class="row">
-        <div class="col-xs-4">
-            <h1 align="center">Genetic Soylent</h1>
-            <p align="center"><em>Random solutions to interesting problems</em></p>
-            <p><br></p>
-        </div>
-        <div class="col-xs-8>">
-            <br />
-            <form class="form-inline" align="center">
-                <label>Generation:</label>
-                <input class="generation form-control input-sm" type="text" style="width: 50px; text-align: center; margin-right: 20px; margin-left: 10px" />
-                <a class="btn btn-primary start-genetic-algorithm" href="#"><i class="icon-play"></i></a>
-                <a class="btn btn-primary pause-genetic-algorithm" href="#" style="display: none;"><i class="icon-pause"></i></a>
-                <a class="btn btn-default step-genetic-algorithm" href="#"><i class="icon-step-forward"></i></a>
-                <a class="btn btn-default reset-genetic-algorithm" href="#"><i class="icon-refresh"></i></a>
-            </form>
-            <form class="form-inline" align="center">
-                <label>Population:</label>
-                <input class="population form-control input-sm" type="text" style="width: 50px; text-align: center" value="100" />
-                <label style="margin-left: 20px;">Mutation probability:</label>
-                <input class="mutation-probability form-control" type="text" style="text-align: center; width: 50px" value="0.5" />
-                <label style="margin-left: 20px;">Mutation multiplier:</label>
-                <input class="mutation-multiplier form-control" type="text" style="text-align: center; width: 50px" value="0.1" />
-                <label style="margin-left: 20px;">Death rate:</label>
-                <input class="death-rate form-control input-sm" type="text" style="width: 50px; text-align: center" value="0.3" />
-            </form>
-        </div>
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Genetic-soylent</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/choj/genetic-soylent">View on GitHub</a>
+
+          <h1 id="project_title">Genetic-soylent</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/choj/genetic-soylent/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/choj/genetic-soylent/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
     </div>
 
-    <div class="row">
-        <div id="ingredientTable" class="col-xs-4"></div>
-        <div id="nutrientTable" class="col-xs-4"></div>
-        <div id="nutrientTableRemainder" class="col-xs-4"></div>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+
+<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+
+<pre><code>$ cd your_repo_root/repo_name
+$ git fetch origin
+$ git checkout gh-pages
+</code></pre>
+
+<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+
+<h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+
+<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+
+<h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+
+<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+
+<h3>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+
+<h3>
+<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+      </section>
     </div>
-    <div class="container">
 
-        <h2>What is this?</h2>
-        <p>Genetic Soylent is an attempt to automatically create a Soylent recipe given a list of ingredients and a target nutrient profile.</p>
-        <p>You can play with it by pressing <i class="icon-step-forward"></i> to step to the next generation, <i class="icon-play"></i> to step to next generations automatically and <i class="icon-refresh"></i> to reset the simulation.</p>
-        <p>Original code by nick: <a href="http://github.com/nick/genetic-soylent">http://github.com/nick/genetic-soylent</a></p>
-        <p>This version by 2potatoes: <a href="http://github.com/2potatoes/genetic-soylent">http://github.com/2potatoes/genetic-soylent</a></p>
-        <p>Notes on genetic soylent can be found on <a href="http://spudlent.blogspot.com/search/label/Genetic%20Soylent">2potatoes blog</a>.</p>
-        <h2>How it works</h2>
-        <ul>
-            <li>Generate 100 recipes, each recipe containing a random amount of each ingredient.</li>
-            <li>Score each recipe based on how close all the nutrients are to 100%.</li>
-            <li>Sort the recipes from best to worst.</li>
-            <li>Show the best one in the table above.</li>
-        </ul>
-        <p>On each subsequent 'generation', the following happens:</p>
-        <ul>
-            <li>Remove the worst 30 recipes from the list</li>
-            <li>Create 30 new Child recipes containing ingredient amounts taken from two randomly selected Parent recipes.</li>
-            <li>Ingredient amounts in each Child can also be mutated if the 'mutation probability' is met.</li>
-            <li>A mutation works by taking a random ingredient and increasing or decreasing the amount defined by the 'mutation multiplier'. For example, a mutation multiplier of 0.1 will increase or decrease the amount of an ingredient by 10%.</li>
-            <li>Finally, we re-calculate the scores for each recipe, sort them, and show the best one in the table.</li>
-        </ul>
-
-    </div>
-    <div class="container">
-        <h2>Choose Your Own Recipe</h2>
-        <p>This should now work with any recipe from <a href='http://diy.soylent.me'>diy.soylent.me</a>. Find your favorite recipe, add "/json" to the end of the URL, copy the resulting text and paste it into the box below.</p>
-        <p><em>Warning:</em> This is still very experimental. I've tried it with my own recipe and one other and it has worked, but I haven't double checked the numbers.</p>
-        <textarea id="inputJSON" rows="10" style="width:100%">
-        </textarea>
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Genetic-soylent maintained by <a href="https://github.com/choj">choj</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
     </div>
 
-    <script type="text/javascript">
+    
 
-        var ingredients = [
-            { name: 'Oat Flour', 'Calories (kcal)': 4.05, 'Carbohydrates (g)': .657, 'Protein (g)': .1625, 'Total Fat (g)': .08725, 'Saturated Fat (g)': .016075, 'Monounsaturated Fat (g)': .02865, 'Polyunsaturated Fat (g)': .0333, 'Omega-3 Fatty Acids (g)': .0015, 'Omega-6 Fatty Acids (g)': .03175, 'Total Fiber (g)': .0875, 'Solubule Fiber (g)': .04, 'Insolubule Fiber (g)': .0475, 'Cholesterol (mg)': 0, 'Vitamin A (IU)': 0, 'Vitamin B6 (mg)': .00125, 'Vitamin B12 (ug)': 0, 'Vitamin C (mg)': 0, 'Vitamin D (IU)': 0, 'Vitamin E (IU)': .004665, 'Vitamin K (ug)': .0325, 'Thiamin (mg)': .006925, 'Riboflavin (mg)': .00125, 'Niacin (mg)': .01475, 'Folate (ug)': .325, 'Panthotenic Acid (mg)': .002, 'Biotin (ug)': 0, 'Choline (mg)': .3, 'Calcium (g)': .00055, 'Chloride (g)': 0, 'Chromium (ug)': 0, 'Copper (mg)': .004375, 'Iodine (ug)': 0, 'Iron (mg)': .04, 'Magnesium (mg)': 1.45, 'Manganese (mg)': .0402, 'Molybdenum (ug)': 2, 'Phosphorus (g)': .004525, 'Potassium (g)': .0037, 'Selenium (ug)': .34, 'Sodium (g)': .0002, 'Sulfur (g)': .00225, 'Zinc (mg)': .032, maxAmount: 500, minAmount: 0 },
-            { name: 'Brown Sugar', 'Calories (kcal)': 3.75, 'Carbohydrates (g)': .98, 'Protein (g)': 0, 'Total Fat (g)': 0, 'Saturated Fat (g)': 0, 'Monounsaturated Fat (g)': 0, 'Polyunsaturated Fat (g)': 0, 'Omega-3 Fatty Acids (g)': 0, 'Omega-6 Fatty Acids (g)': 0, 'Total Fiber (g)': 0, 'Solubule Fiber (g)': 0, 'Insolubule Fiber (g)': 0, 'Cholesterol (mg)': 0, 'Vitamin A (IU)': 0, 'Vitamin B6 (mg)': .0005, 'Vitamin B12 (ug)': 0, 'Vitamin C (mg)': 0, 'Vitamin D (IU)': 0, 'Vitamin E (IU)': 0, 'Vitamin K (ug)': 0, 'Thiamin (mg)': 0, 'Riboflavin (mg)': 0, 'Niacin (mg)': .001, 'Folate (ug)': 0, 'Panthotenic Acid (mg)': .00125, 'Biotin (ug)': 0, 'Choline (mg)': .025, 'Calcium (g)': .00075, 'Chloride (g)': 0, 'Chromium (ug)': 0, 'Copper (mg)': .0005, 'Iodine (ug)': 0, 'Iron (mg)': .0075, 'Magnesium (mg)': .1, 'Manganese (mg)': .00075, 'Molybdenum (ug)': 0, 'Phosphorus (g)': .00005, 'Potassium (g)': .00125, 'Selenium (ug)': 0, 'Sodium (g)': .00025, 'Sulfur (g)': 0, 'Zinc (mg)': 0, maxAmount: 75, minAmount: 0 },
-            { name: 'Cocoa Powder', 'Calories (kcal)': 3.9285714285714286, 'Carbohydrates (g)': .5828571428571429, 'Protein (g)': .1814285714285714, 'Total Fat (g)': .1314285714285714, 'Saturated Fat (g)': .0775714285714286, 'Monounsaturated Fat (g)': .0438571428571429, 'Polyunsaturated Fat (g)': .0041428571428571, 'Omega-3 Fatty Acids (g)': 0, 'Omega-6 Fatty Acids (g)': 0, 'Total Fiber (g)': .3, 'Solubule Fiber (g)': 0, 'Insolubule Fiber (g)': 0, 'Cholesterol (mg)': 0, 'Vitamin A (IU)': 0, 'Vitamin B6 (mg)': .0011428571428571, 'Vitamin B12 (ug)': 0, 'Vitamin C (mg)': 0, 'Vitamin D (IU)': 0, 'Vitamin E (IU)': .0009571428571429, 'Vitamin K (ug)': .0285714285714286, 'Thiamin (mg)': .0011428571428571, 'Riboflavin (mg)': .0045714285714286, 'Niacin (mg)': .024, 'Folate (ug)': .2857142857142857, 'Panthotenic Acid (mg)': .0025714285714286, 'Biotin (ug)': 0, 'Choline (mg)': .1142857142857143, 'Calcium (g)': .0014285714285714, 'Chloride (g)': 0, 'Chromium (ug)': 0, 'Copper (mg)': .036, 'Iodine (ug)': 0, 'Iron (mg)': .1557142857142857, 'Magnesium (mg)': 4.7142857142857143, 'Manganese (mg)': .0374285714285714, 'Molybdenum (ug)': 0, 'Phosphorus (g)': 0, 'Potassium (g)': .0251428571428571, 'Selenium (ug)': .1285714285714286, 'Sodium (g)': .0001428571428571, 'Sulfur (g)': 0, 'Zinc (mg)': .0642857142857143, maxAmount: 500, minAmount: 0 },
-            { name: 'Emergen-C', 'Calories (kcal)': 2.8409090909090909, 'Carbohydrates (g)': .6818181818181818, 'Protein (g)': 0, 'Total Fat (g)': 0, 'Saturated Fat (g)': 0, 'Monounsaturated Fat (g)': 0, 'Polyunsaturated Fat (g)': 0, 'Omega-3 Fatty Acids (g)': 0, 'Omega-6 Fatty Acids (g)': 0, 'Total Fiber (g)': 0, 'Solubule Fiber (g)': 0, 'Insolubule Fiber (g)': 0, 'Cholesterol (mg)': 0, 'Vitamin A (IU)': 0, 'Vitamin B6 (mg)': 1.1363636363636364, 'Vitamin B12 (ug)': 2.8409090909090909, 'Vitamin C (mg)': 113.6363636363636364, 'Vitamin D (IU)': 0, 'Vitamin E (IU)': 0, 'Vitamin K (ug)': 0, 'Thiamin (mg)': .0431818181818182, 'Riboflavin (mg)': .0488636363636364, 'Niacin (mg)': .5681818181818182, 'Folate (ug)': 1.4204545454545455, 'Panthotenic Acid (mg)': .2840909090909091, 'Biotin (ug)': 0, 'Choline (mg)': 0, 'Calcium (g)': .0056818181818182, 'Chloride (g)': 0, 'Chromium (ug)': 1.1363636363636364, 'Copper (mg)': 0, 'Iodine (ug)': 0, 'Iron (mg)': 0, 'Magnesium (mg)': 6.8181818181818182, 'Manganese (mg)': .0568181818181818, 'Molybdenum (ug)': 0, 'Phosphorus (g)': .0043181818181818, 'Potassium (g)': .0227272727272727, 'Selenium (ug)': 0, 'Sodium (g)': .0068181818181818, 'Sulfur (g)': 0, 'Zinc (mg)': .2272727272727273, maxAmount: 500, minAmount: 0 },
-            { name: 'Ground Flax', 'Calories (kcal)': 4.9230769230769231, 'Carbohydrates (g)': .2923076923076923, 'Protein (g)': .1923076923076923, 'Total Fat (g)': .3646153846153846, 'Saturated Fat (g)': .0366153846153846, 'Monounsaturated Fat (g)': .0753076923076923, 'Polyunsaturated Fat (g)': .2873076923076923, 'Omega-3 Fatty Acids (g)': .1846153846153846, 'Omega-6 Fatty Acids (g)': .0430769230769231, 'Total Fiber (g)': .3076923076923077, 'Solubule Fiber (g)': .1023076923076923, 'Insolubule Fiber (g)': .2053846153846154, 'Cholesterol (mg)': 0, 'Vitamin A (IU)': 0, 'Vitamin B6 (mg)': .0046923076923077, 'Vitamin B12 (ug)': 0, 'Vitamin C (mg)': .0076923076923077, 'Vitamin D (IU)': 0, 'Vitamin E (IU)': .0020538461538462, 'Vitamin K (ug)': .0461538461538462, 'Thiamin (mg)': .0164615384615385, 'Riboflavin (mg)': .0016153846153846, 'Niacin (mg)': .0307692307692308, 'Folate (ug)': .8461538461538462, 'Panthotenic Acid (mg)': .0098461538461538, 'Biotin (ug)': 0, 'Choline (mg)': .7846153846153846, 'Calcium (g)': .0023, 'Chloride (g)': 0, 'Chromium (ug)': 0, 'Copper (mg)': .0122307692307692, 'Iodine (ug)': 0, 'Iron (mg)': .0569230769230769, 'Magnesium (mg)': 3.9230769230769231, 'Manganese (mg)': .0248461538461538, 'Molybdenum (ug)': 0, 'Phosphorus (g)': .0063846153846154, 'Potassium (g)': .0081538461538462, 'Selenium (ug)': .2538461538461538, 'Sodium (g)': .0003076923076923, 'Sulfur (g)': 0, 'Zinc (mg)': .0430769230769231, maxAmount: 30, minAmount: 0 },
-            { name: 'Olive Oil', 'Calories (kcal)': 8.8235294117647059, 'Carbohydrates (g)': 0, 'Protein (g)': 0, 'Total Fat (g)': 1, 'Saturated Fat (g)': .1380882352941176, 'Monounsaturated Fat (g)': .7296323529411765, 'Polyunsaturated Fat (g)': .1052205882352941, 'Omega-3 Fatty Acids (g)': .0073529411764706, 'Omega-6 Fatty Acids (g)': .0969117647058824, 'Total Fiber (g)': 0, 'Solubule Fiber (g)': 0, 'Insolubule Fiber (g)': 0, 'Cholesterol (mg)': 0, 'Vitamin A (IU)': 0, 'Vitamin B6 (mg)': 0, 'Vitamin B12 (ug)': 0, 'Vitamin C (mg)': 0, 'Vitamin D (IU)': 0, 'Vitamin E (IU)': .1433823529411765, 'Vitamin K (ug)': .6029411764705882, 'Thiamin (mg)': 0, 'Riboflavin (mg)': 0, 'Niacin (mg)': 0, 'Folate (ug)': 0, 'Panthotenic Acid (mg)': 0, 'Biotin (ug)': 0, 'Choline (mg)': 0, 'Calcium (g)': 0, 'Chloride (g)': 0, 'Chromium (ug)': 0, 'Copper (mg)': 0, 'Iodine (ug)': 0, 'Iron (mg)': .0058823529411765, 'Magnesium (mg)': 0, 'Manganese (mg)': 0, 'Molybdenum (ug)': 0, 'Phosphorus (g)': 0, 'Potassium (g)': 0, 'Selenium (ug)': 0, 'Sodium (g)': 0, 'Sulfur (g)': 0, 'Zinc (mg)': 0, maxAmount: 500, minAmount: 0 },
-            { name: 'Potassium Gluconate', 'Calories (kcal)': 0, 'Carbohydrates (g)': 0, 'Protein (g)': 0, 'Total Fat (g)': 0, 'Saturated Fat (g)': 0, 'Monounsaturated Fat (g)': 0, 'Polyunsaturated Fat (g)': 0, 'Omega-3 Fatty Acids (g)': 0, 'Omega-6 Fatty Acids (g)': 0, 'Total Fiber (g)': 0, 'Solubule Fiber (g)': 0, 'Insolubule Fiber (g)': 0, 'Cholesterol (mg)': 0, 'Vitamin A (IU)': 0, 'Vitamin B6 (mg)': 0, 'Vitamin B12 (ug)': 0, 'Vitamin C (mg)': 0, 'Vitamin D (IU)': 0, 'Vitamin E (IU)': 0, 'Vitamin K (ug)': 0, 'Thiamin (mg)': 0, 'Riboflavin (mg)': 0, 'Niacin (mg)': 0, 'Folate (ug)': 0, 'Panthotenic Acid (mg)': 0, 'Biotin (ug)': 0, 'Choline (mg)': 0, 'Calcium (g)': 0, 'Chloride (g)': 0, 'Chromium (ug)': 0, 'Copper (mg)': 0, 'Iodine (ug)': 0, 'Iron (mg)': 0, 'Magnesium (mg)': 0, 'Manganese (mg)': 0, 'Molybdenum (ug)': 0, 'Phosphorus (g)': 0, 'Potassium (g)': .1551724137931034, 'Selenium (ug)': 0, 'Sodium (g)': 0, 'Sulfur (g)': 0, 'Zinc (mg)': 0, maxAmount: 20, minAmount: 0 },
-            { name: 'Salt', 'Calories (kcal)': 0, 'Carbohydrates (g)': 0, 'Protein (g)': 0, 'Total Fat (g)': 0, 'Saturated Fat (g)': 0, 'Monounsaturated Fat (g)': 0, 'Polyunsaturated Fat (g)': 0, 'Omega-3 Fatty Acids (g)': 0, 'Omega-6 Fatty Acids (g)': 0, 'Total Fiber (g)': 0, 'Solubule Fiber (g)': 0, 'Insolubule Fiber (g)': 0, 'Cholesterol (mg)': 0, 'Vitamin A (IU)': 0, 'Vitamin B6 (mg)': 0, 'Vitamin B12 (ug)': 0, 'Vitamin C (mg)': 0, 'Vitamin D (IU)': 0, 'Vitamin E (IU)': 0, 'Vitamin K (ug)': 0, 'Thiamin (mg)': 0, 'Riboflavin (mg)': 0, 'Niacin (mg)': 0, 'Folate (ug)': 0, 'Panthotenic Acid (mg)': 0, 'Biotin (ug)': 0, 'Choline (mg)': 0, 'Calcium (g)': 0, 'Chloride (g)': .6066666666666667, 'Chromium (ug)': 0, 'Copper (mg)': 0, 'Iodine (ug)': 0, 'Iron (mg)': 0, 'Magnesium (mg)': 0, 'Manganese (mg)': .0013333333333333, 'Molybdenum (ug)': 0, 'Phosphorus (g)': 0, 'Potassium (g)': 0, 'Selenium (ug)': 0, 'Sodium (g)': .3933333333333333, 'Sulfur (g)': 0, 'Zinc (mg)': 0, maxAmount: 500, minAmount: 0 },
-            { name: 'Soy Lecithin', 'Calories (kcal)': 7.625, 'Carbohydrates (g)': .0625, 'Protein (g)': 0, 'Total Fat (g)': .56125, 'Saturated Fat (g)': .118125, 'Monounsaturated Fat (g)': .086375, 'Polyunsaturated Fat (g)': .35675, 'Omega-3 Fatty Acids (g)': .05125, 'Omega-6 Fatty Acids (g)': .40125, 'Total Fiber (g)': 0, 'Solubule Fiber (g)': 0, 'Insolubule Fiber (g)': 0, 'Cholesterol (mg)': 0, 'Vitamin A (IU)': 0, 'Vitamin B6 (mg)': 0, 'Vitamin B12 (ug)': 0, 'Vitamin C (mg)': 0, 'Vitamin D (IU)': 0, 'Vitamin E (IU)': .05416125, 'Vitamin K (ug)': 1.8375, 'Thiamin (mg)': 0, 'Riboflavin (mg)': 0, 'Niacin (mg)': 0, 'Folate (ug)': 0, 'Panthotenic Acid (mg)': 0, 'Biotin (ug)': 0, 'Choline (mg)': 31.25, 'Calcium (g)': .00125, 'Chloride (g)': 0, 'Chromium (ug)': 0, 'Copper (mg)': 0, 'Iodine (ug)': 0, 'Iron (mg)': .01, 'Magnesium (mg)': 0, 'Manganese (mg)': 0, 'Molybdenum (ug)': 0, 'Phosphorus (g)': 0, 'Potassium (g)': 0, 'Selenium (ug)': 0, 'Sodium (g)': 0, 'Sulfur (g)': 0, 'Zinc (mg)': 0, maxAmount: 500, minAmount: 0 },
-            { name: 'Trader Joes Soy Protein', 'Calories (kcal)': 3.7931034482758621, 'Carbohydrates (g)': 0, 'Protein (g)': .7931034482758621, 'Total Fat (g)': .0517241379310345, 'Saturated Fat (g)': 0, 'Monounsaturated Fat (g)': 0, 'Polyunsaturated Fat (g)': 0, 'Omega-3 Fatty Acids (g)': 0, 'Omega-6 Fatty Acids (g)': 0, 'Total Fiber (g)': 0, 'Solubule Fiber (g)': 0, 'Insolubule Fiber (g)': 0, 'Cholesterol (mg)': 0, 'Vitamin A (IU)': 60.3448275862068966, 'Vitamin B6 (mg)': .0241379310344828, 'Vitamin B12 (ug)': .0724137931034483, 'Vitamin C (mg)': .7241379310344828, 'Vitamin D (IU)': 4.8275862068965517, 'Vitamin E (IU)': .3448275862068966, 'Vitamin K (ug)': .7586206896551724, 'Thiamin (mg)': .0179310344827586, 'Riboflavin (mg)': .0203448275862069, 'Niacin (mg)': .2413793103448276, 'Folate (ug)': 4.8275862068965517, 'Panthotenic Acid (mg)': .1206896551724138, 'Biotin (ug)': 3.6206896551724138, 'Choline (mg)': 0, 'Calcium (g)': .0103448275862069, 'Chloride (g)': 0, 'Chromium (ug)': .6896551724137931, 'Copper (mg)': .0344827586206897, 'Iodine (ug)': 1.7931034482758621, 'Iron (mg)': .3103448275862069, 'Magnesium (mg)': 4.1379310344827586, 'Manganese (mg)': .0448275862068966, 'Molybdenum (ug)': 2.103448275862069, 'Phosphorus (g)': .0127586206896552, 'Potassium (g)': .0008620689655172, 'Selenium (ug)': .6896551724137931, 'Sodium (g)': .0082758620689655, 'Sulfur (g)': 0, 'Zinc (mg)': .2172413793103448, maxAmount: 500, minAmount: 0 },
-            { name: 'Skim Milk', 'Calories (kcal)': .3404139433551198, 'Carbohydrates (g)': .0495915032679739, 'Protein (g)': .0336873638344227, 'Total Fat (g)': .0007897603485839, 'Saturated Fat (g)': .0005610021786492, 'Monounsaturated Fat (g)': .0002205882352941, 'Polyunsaturated Fat (g)': .0000299564270153, 'Omega-3 Fatty Acids (g)': 0, 'Omega-6 Fatty Acids (g)': 0, 'Total Fiber (g)': 0, 'Solubule Fiber (g)': 0, 'Insolubule Fiber (g)': 0, 'Cholesterol (mg)': .0190631808278867, 'Vitamin A (IU)': 2.039760348583878, 'Vitamin B6 (mg)': .0003703703703704, 'Vitamin B12 (ug)': .0050108932461874, 'Vitamin C (mg)': 0, 'Vitamin D (IU)': .4714324618736383, 'Vitamin E (IU)': .000072614379085, 'Vitamin K (ug)': 0, 'Thiamin (mg)': .0004493464052288, 'Riboflavin (mg)': .0018191721132898, 'Niacin (mg)': .0009395424836601, 'Folate (ug)': .0490196078431373, 'Panthotenic Acid (mg)': .0035702614379085, 'Biotin (ug)': 0, 'Choline (mg)': .1560457516339869, 'Calcium (g)': .0012200435729847, 'Chloride (g)': 0, 'Chromium (ug)': 0, 'Copper (mg)': .0001307189542484, 'Iodine (ug)': 0, 'Iron (mg)': .0002995642701525, 'Magnesium (mg)': 0, 'Manganese (mg)': .0000299564270153, 'Molybdenum (ug)': 0, 'Phosphorus (g)': 0, 'Potassium (g)': 0, 'Selenium (ug)': .0310457516339869, 'Sodium (g)': 0, 'Sulfur (g)': 0, 'Zinc (mg)': 0, maxAmount: 360, minAmount: 0 },
-            { name: 'D3 Pill (1000 IU)', 'Calories (kcal)': 0, 'Carbohydrates (g)': 0, 'Protein (g)': 0, 'Total Fat (g)': 0, 'Saturated Fat (g)': 0, 'Monounsaturated Fat (g)': 0, 'Polyunsaturated Fat (g)': 0, 'Omega-3 Fatty Acids (g)': 0, 'Omega-6 Fatty Acids (g)': 0, 'Total Fiber (g)': 0, 'Solubule Fiber (g)': 0, 'Insolubule Fiber (g)': 0, 'Cholesterol (mg)': 0, 'Vitamin A (IU)': 0, 'Vitamin B6 (mg)': 0, 'Vitamin B12 (ug)': 0, 'Vitamin C (mg)': 0, 'Vitamin D (IU)': 1000, 'Vitamin E (IU)': 0, 'Vitamin K (ug)': 0, 'Thiamin (mg)': 0, 'Riboflavin (mg)': 0, 'Niacin (mg)': 0, 'Folate (ug)': 0, 'Panthotenic Acid (mg)': 0, 'Biotin (ug)': 0, 'Choline (mg)': 0, 'Calcium (g)': 0, 'Chloride (g)': 0, 'Chromium (ug)': 0, 'Copper (mg)': 0, 'Iodine (ug)': 0, 'Iron (mg)': 0, 'Magnesium (mg)': 0, 'Manganese (mg)': 0, 'Molybdenum (ug)': 0, 'Phosphorus (g)': 0, 'Potassium (g)': 0, 'Selenium (ug)': 0, 'Sodium (g)': 0, 'Sulfur (g)': 0, 'Zinc (mg)': 0, maxAmount: 500, minAmount: 0 },
-            { name: 'Ground Chia', 'Calories (kcal)': 4.86, 'Carbohydrates (g)': .4212, 'Protein (g)': .1654, 'Total Fat (g)': .3074, 'Saturated Fat (g)': .0333, 'Monounsaturated Fat (g)': .02309, 'Polyunsaturated Fat (g)': .23665, 'Omega-3 Fatty Acids (g)': 0, 'Omega-6 Fatty Acids (g)': 0, 'Total Fiber (g)': .344, 'Solubule Fiber (g)': 0, 'Insolubule Fiber (g)': 0, 'Cholesterol (mg)': 0, 'Vitamin A (IU)': .54, 'Vitamin B6 (mg)': 0, 'Vitamin B12 (ug)': 0, 'Vitamin C (mg)': .016, 'Vitamin D (IU)': 0, 'Vitamin E (IU)': .003333, 'Vitamin K (ug)': 0, 'Thiamin (mg)': .0062, 'Riboflavin (mg)': .0017, 'Niacin (mg)': .0883, 'Folate (ug)': .49, 'Panthotenic Acid (mg)': 0, 'Biotin (ug)': 0, 'Choline (mg)': 0, 'Calcium (g)': .00631, 'Chloride (g)': 0, 'Chromium (ug)': 0, 'Copper (mg)': .00924, 'Iodine (ug)': 0, 'Iron (mg)': .0772, 'Magnesium (mg)': 3.35, 'Manganese (mg)': .02723, 'Molybdenum (ug)': 0, 'Phosphorus (g)': .0086, 'Potassium (g)': .00407, 'Selenium (ug)': .552, 'Sodium (g)': .00016, 'Sulfur (g)': 0, 'Zinc (mg)': .0458, maxAmount: 40, minAmount: 0 },
-            { name: 'Almond Flour', 'Calories (kcal)': 5.9, 'Carbohydrates (g)': .1867, 'Protein (g)': .214, 'Total Fat (g)': .5252, 'Saturated Fat (g)': .03953, 'Monounsaturated Fat (g)': .33415, 'Polyunsaturated Fat (g)': .12368, 'Omega-3 Fatty Acids (g)': 0, 'Omega-6 Fatty Acids (g)': 0, 'Total Fiber (g)': .099, 'Solubule Fiber (g)': 0, 'Insolubule Fiber (g)': 0, 'Cholesterol (mg)': 0, 'Vitamin A (IU)': .07, 'Vitamin B6 (mg)': .00115, 'Vitamin B12 (ug)': 0, 'Vitamin C (mg)': 0, 'Vitamin D (IU)': 0, 'Vitamin E (IU)': .1583175, 'Vitamin K (ug)': 0, 'Thiamin (mg)': .00191, 'Riboflavin (mg)': .00711, 'Niacin (mg)': .035, 'Folate (ug)': .49, 'Panthotenic Acid (mg)': .00314, 'Biotin (ug)': 0, 'Choline (mg)': .521, 'Calcium (g)': .00236, 'Chloride (g)': 0, 'Chromium (ug)': 0, 'Copper (mg)': .01027, 'Iodine (ug)': 0, 'Iron (mg)': .0328, 'Magnesium (mg)': 2.68, 'Manganese (mg)': .01835, 'Molybdenum (ug)': 0, 'Phosphorus (g)': .00481, 'Potassium (g)': .00659, 'Selenium (ug)': .032, 'Sodium (g)': .00019, 'Sulfur (g)': 0, 'Zinc (mg)': .0297, maxAmount: 500, minAmount: 0 },
-            { name: 'Cinnamon', 'Calories (kcal)': 2.47, 'Carbohydrates (g)': .8059, 'Protein (g)': .0399, 'Total Fat (g)': .0124, 'Saturated Fat (g)': .00345, 'Monounsaturated Fat (g)': .00246, 'Polyunsaturated Fat (g)': .00068, 'Omega-3 Fatty Acids (g)': 0, 'Omega-6 Fatty Acids (g)': 0, 'Total Fiber (g)': .531, 'Solubule Fiber (g)': 0, 'Insolubule Fiber (g)': 0, 'Cholesterol (mg)': 0, 'Vitamin A (IU)': 2.95, 'Vitamin B6 (mg)': .00158, 'Vitamin B12 (ug)': 0, 'Vitamin C (mg)': .038, 'Vitamin D (IU)': 0, 'Vitamin E (IU)': .01546512, 'Vitamin K (ug)': .312, 'Thiamin (mg)': .00022, 'Riboflavin (mg)': .00041, 'Niacin (mg)': .01332, 'Folate (ug)': .06, 'Panthotenic Acid (mg)': .00358, 'Biotin (ug)': 0, 'Choline (mg)': .11, 'Calcium (g)': .01002, 'Chloride (g)': 0, 'Chromium (ug)': 0, 'Copper (mg)': .00339, 'Iodine (ug)': 0, 'Iron (mg)': .0832, 'Magnesium (mg)': .6, 'Manganese (mg)': .17466, 'Molybdenum (ug)': 0, 'Phosphorus (g)': .00064, 'Potassium (g)': .00431, 'Selenium (ug)': .031, 'Sodium (g)': .0001, 'Sulfur (g)': 0, 'Zinc (mg)': .0183, maxAmount: 5, minAmount: 0 },
-        ];
-
-        var testGeneticSoylent = new GeneticSoylent({
-            ingredients: ingredients,
-            targetNutrients: {
-                'Calories (kcal)': {min: 1800, max: 2200, importanceFactor: 3},
-                'Carbohydrates (g)': {min: 250, max: 2500, importanceFactor: 1},
-                'Protein (g)': {min: 85, max: 850, importanceFactor: 1},
-                'Total Fat (g)': {min: 65, max: 650, importanceFactor: 1},
-                'Omega-3 Fatty Acids (g)': {min: 1.6, max: 16, importanceFactor: 1},
-                'Omega-6 Fatty Acids (g)': {min: 17, max: 170, importanceFactor: 1},
-                'Total Fiber (g)': {min: 28, max: 280, importanceFactor: 3},
-                'Vitamin A (IU)': {min: 3000, max: 6500, importanceFactor: 1},
-                'Vitamin B6 (mg)': {min: 1.3, max: 50.65, importanceFactor: 1},
-                'Vitamin B12 (ug)': {min: 2.4, max: 24, importanceFactor: 1},
-                'Vitamin C (mg)': {min: 90, max: 1045, importanceFactor: 1},
-                'Vitamin D (IU)': {min: 600, max: 2300, importanceFactor: 1},
-                'Vitamin E (IU)': {min: 20, max: 510, importanceFactor: 1},
-                'Vitamin K (ug)': {min: 120, max: 1200, importanceFactor: 1},
-                'Thiamin (mg)': {min: 1.2, max: 12, importanceFactor: 1},
-                'Riboflavin (mg)': {min: 1.3, max: 13, importanceFactor: 1},
-                'Niacin (mg)': {min: 16, max: 25.5, importanceFactor: 1},
-                'Folate (ug)': {min: 400, max: 700, importanceFactor: 1},
-                'Panthotenic Acid (mg)': {min: 5, max: 50, importanceFactor: 1},
-                'Biotin (ug)': {min: 30, max: 300, importanceFactor: 1},
-                'Choline (mg)': {min: 550, max: 2025, importanceFactor: 1},
-                'Calcium (g)': {min: 1, max: 1.75, importanceFactor: 1},
-                'Chloride (g)': {min: 2.3, max: 2.95, importanceFactor: 1},
-                'Chromium (ug)': {min: 35, max: 350, importanceFactor: 1},
-                'Copper (mg)': {min: 0.9, max: 5.45, importanceFactor: 1},
-                'Iodine (ug)': {min: 150, max: 625, importanceFactor: 1},
-                'Iron (mg)': {min: 8, max: 26.5, importanceFactor: 10},
-                'Magnesium (mg)': {min: 420, max: 4200, importanceFactor: 1},
-                'Manganese (mg)': {min: 2.3, max: 6.65, importanceFactor: 1},
-                'Molybdenum (ug)': {min: 45, max: 1022.5, importanceFactor: 1},
-                'Phosphorus (g)': {min: 0.7, max: 2.35, importanceFactor: 1},
-                'Potassium (g)': {min: 3.5, max: 5, importanceFactor: 1},
-                'Selenium (ug)': {min: 55, max: 227.5, importanceFactor: 1},
-                'Sodium (g)': {min: 1.5, max: 1.9, importanceFactor: 1},
-                'Sulfur (g)': {min: 2, max: 20, importanceFactor: 1},
-                'Zinc (mg)': {min: 11, max: 25.5, importanceFactor: 1},
-            }
-        });
-
-    </script>
-
-</body>
+  </body>
 </html>

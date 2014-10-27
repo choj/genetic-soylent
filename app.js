@@ -147,7 +147,7 @@ $(function(){
     $(document).ready(function() {
         var loadRecipe = getUrlVar("recipe");
         if (loadRecipe) {
-            var queryString = "http://diy.soylent.me/recipes/" + loadRecipe + "/json?callback=?";
+            var queryString = "https://diy.soylent.me/recipes/" + loadRecipe + "/json?callback=?";
             // As always, thanks stackoverflow:
             // http://stackoverflow.com/questions/6809053/simple-jquery-php-and-jsonp-example
             $.getJSON(queryString,'geneticCallback',function(dataToLoad){
